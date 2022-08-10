@@ -1,10 +1,10 @@
 import React from "react";
 import "./Banner.css";
 
-function Banner() {
+function Banner({title}) {
   return (
     <div className="banner">
-      <h3>Popular Titles</h3>
+      <h3>{title}</h3>
     </div>
   );
 }

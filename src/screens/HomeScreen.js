@@ -8,7 +8,7 @@ function HomeScreen() {
   return (
     <div>
       <NavBar />
-      <Banner />
+      <Banner title="Popular Titles" />
       <div style={{ display: "flex", padding: "0 10rem" }}>
         <Title title="SERIES" subtitle="Popular Series" />
         <Title title="MOVIES" subtitle="Popular Movies" />
