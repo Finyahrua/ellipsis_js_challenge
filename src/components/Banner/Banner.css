@@ -1,0 +1,6 @@
+.banner {
+  display: flex;
+  padding-left: 10rem;
+  background-color: #404041;
+  color: #fff;
+}
