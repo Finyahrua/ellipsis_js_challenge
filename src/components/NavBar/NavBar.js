@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
   return (
     <div className="nav-bar">
       <div>
-        <h1 className="logo">DEMO Streaming</h1>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <h1 className="logo">DEMO Streaming</h1>
+        </Link>
       </div>
       <div className="auth-section">
         <p className="log-in">Log in</p>

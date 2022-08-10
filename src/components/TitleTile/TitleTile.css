@@ -1,0 +1,14 @@
+.title-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.tile-image {
+  width: 150px;
+  height: 250px;
+  display: flex;
+  object-fit: contain;
+}
