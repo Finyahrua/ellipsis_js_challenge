@@ -11,7 +11,10 @@ function HomeScreen() {
       <NavBar />
       <Banner title="Popular Titles" />
       <div style={{ display: "flex", padding: "0 10rem" }}>
-        <Link to="/error" style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to="/series-details"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Title title="SERIES" subtitle="Popular Series" />
         </Link>
         <Link
@@ -21,7 +24,7 @@ function HomeScreen() {
           <Title title="MOVIES" subtitle="Popular Movies" />
         </Link>
       </div>
-      <div style={{ position: "fixed",bottom: 0,width: "100%" }}>
+      <div style={{ position: "fixed", bottom: 0, width: "100%" }}>
         <Footer />
       </div>
     </div>

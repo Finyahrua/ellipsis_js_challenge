@@ -12,6 +12,7 @@ function Moviedetails() {
   const [loading, setLoading] = React.useState(false);
   const url =
     "https://raw.githubusercontent.com/amawalla/js-coding-challenge/master/feed/sample.json";
+
   const getMovies = () => {
     try {
       axios.get(url).then((res) => {
@@ -19,7 +20,7 @@ function Moviedetails() {
           // returning movies whose release year is greater than or equal to 2010
           res.data.entries.filter(
             (movie) =>
-              movie.programType === "movie" && movie.releaseYear >= "2010"
+              movie.programType === "series" && movie.releaseYear >= "2010"
           )
         );
       });

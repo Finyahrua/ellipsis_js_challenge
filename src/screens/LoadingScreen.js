@@ -11,7 +11,9 @@ function ErrorScreen() {
       <div style={{ display: "flex", padding: "0 10rem", marginTop: "20px" }}>
         <p>Loading...</p>
       </div>
-      <Footer />
+      <div style={{ position: "fixed", bottom: 0, width: "100%" }}>
+        <Footer />
+      </div>
     </div>
   );
 }

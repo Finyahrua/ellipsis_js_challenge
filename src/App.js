@@ -4,7 +4,7 @@ import ErrorScreen from "./screens/ErrorScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoadingScreen from "./screens/LoadingScreen";
 import Moviedetails from "./screens/Moviedetails";
-
+import SeriesDetails from "./screens/SeriesDetails";
 function App() {
   return (
     <Router>
@@ -14,6 +14,7 @@ function App() {
           <Route path="/error" component={ErrorScreen} />
           <Route path="/loading" component={LoadingScreen} />
           <Route path="/movie-details" component={Moviedetails} />
+          <Route path="/series-details" component={SeriesDetails} />
         </Switch>
       </div>
     </Router>
