@@ -8,16 +8,16 @@ import ErrorScreen from "./ErrorScreen";
 import LoadingScreen from "./LoadingScreen";
 
 function Moviedetails() {
-  const [movies, setMovies] = React.useState([]);
+  const [series, setSeries] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const url =
     "https://raw.githubusercontent.com/amawalla/js-coding-challenge/master/feed/sample.json";
 
-  const getMovies = () => {
+  const getSeries = () => {
     try {
       axios.get(url).then((res) => {
-        setMovies(
-          // returning movies whose release year is greater than or equal to 2010
+        setSeries(
+          // returning series whose release year is greater than or equal to 2010
           res.data.entries.filter(
             (movie) =>
               movie.programType === "series" && movie.releaseYear >= "2010"
@@ -30,15 +30,15 @@ function Moviedetails() {
     }
   };
   useEffect(() => {
-    getMovies();
+    getSeries();
   }, []);
 
-  // slicing on the movies in order to return only the first 21 movies
-  var moviesSliced = movies.slice(0, 21);
+  // slicing on the series in order to return only the first 21 series
+  var seriesSliced = series.slice(0, 21);
 
-  //   function to sort the movies alphabetically
-  function sortMovies(movies) {
-    return movies.sort((a, b) => {
+  //   function to sort the series alphabetically
+  function sortSeries(series) {
+    return series.sort((a, b) => {
       if (a.title < b.title) {
         return -1;
       }
@@ -48,8 +48,8 @@ function Moviedetails() {
       return 0;
     });
   }
-  //sorting the movies and assigning them to the moviesSliced variable
-  moviesSliced = sortMovies(moviesSliced);
+  //sorting the series and assigning them to the seriesSliced variable
+  seriesSliced = sortSeries(seriesSliced);
 
   return (
     <>
@@ -66,9 +66,9 @@ function Moviedetails() {
               marginRight: "6rem",
             }}
           >
-            {/* displaying only the first 21 movies whose year is greater than 2010*/}
+            {/* displaying only the first 21 series whose year is greater than 2010*/}
 
-            {moviesSliced.map((movie) => (
+            {seriesSliced.map((movie) => (
               <TitleTile
                 title={movie.title}
                 image={movie.images["Poster Art"].url}
