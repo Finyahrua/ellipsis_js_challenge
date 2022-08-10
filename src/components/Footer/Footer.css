@@ -6,3 +6,33 @@
   background: #1e1f1f;
   color: white;
 }
+
+.footer-content {
+  margin-top: 40px;
+  display: flex;
+  margin-left: 6.5rem;
+}
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  color: #978d90;
+}
+.footer-list-item {
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+.footer-copyright {
+  display: flex;
+  margin-left: 10rem;
+  margin-top: -20px;
+  color: #978d90;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10rem;
+  margin-right: 9rem;
+  margin-top: 3rem;
+}
